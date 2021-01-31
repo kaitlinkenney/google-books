@@ -1,7 +1,7 @@
 import React from "react";
-import "./title.css";
+import "./titlesearch.css";
 
-function Title () {
+function TitleSearch () {
     return (
     <div className="container">
         <h1>Google Books Search</h1>
@@ -11,4 +11,4 @@ function Title () {
     )
 }
 
-export default Title;
+export default TitleSearch;

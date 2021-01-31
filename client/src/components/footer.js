@@ -1,14 +1,14 @@
-import React from "react";
-import "./footer.css";
+// import React from "react";
+// import "./footer.css";
 
-function Footer(){
-    return (
-   <div>
-    <footer className="footer">
+// function Footer(){
+//     return (
+//    <div>
+//     <footer className="footer">
     
-  </footer>
-  </div> 
-    )
-}
+//   </footer>
+//   </div> 
+//     )
+// }
 
-export default Footer;
+// export default Footer;

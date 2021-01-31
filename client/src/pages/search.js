@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import Title from "../components/title";
+import TitleSearch from "../components/titlesearch";
 import Searchbar from "../components/searchbar";
-import Results from "../components/results";
+// import Results from "../components/results";
+import "./search.css";
 
 function Search () {
     return (
         <div>
-        <Title/>
+        <TitleSearch/>
         <Searchbar />
-        <Results />
+        {/* <Results /> */}
         </div>
     )
 }

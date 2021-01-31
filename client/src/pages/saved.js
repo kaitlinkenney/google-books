@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import Title from "../components/title";
+import Saved from "../components/saved";
+import TitleSaved from "../components/titlesaved";
 
-function Saved () {
+
+function SavedPage () {
     return (
-        <Title/>
+        <div>
+        <TitleSaved/>
+        <Saved />
+        </div>
     )
 }
-export default Saved;
+export default SavedPage;

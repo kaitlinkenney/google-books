@@ -1,0 +1,12 @@
+.container {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 40px;
+    justify-items: center;
+    background-color: rgb(235, 235, 235);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
