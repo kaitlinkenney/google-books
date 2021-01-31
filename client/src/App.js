@@ -11,8 +11,13 @@ function App() {
     <Router>
       <div>
         <Navbar />
-          <Route exact path="/" component={Search} />
+        <Route exact path={["/", "/books"]}>
+            <Search />
+          </Route>
           <Route exact path="/saved" component={SavedPage} />
+          {/* <Route exact path="/books/:id">
+            <Detail />
+          </Route> */}
       </div>
     </Router>
   );

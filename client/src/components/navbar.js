@@ -13,7 +13,7 @@ function Navbar(props) {
             <Link
               to="/"
               className={
-                window.location.pathname === "/"
+                window.location.pathname === "/" || "/books"
                   ? "nav-link active"
                   : "nav-link"
               }

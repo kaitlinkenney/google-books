@@ -7,6 +7,10 @@ import Searchbar from "../components/searchbar";
 import "./search.css";
 
 function Search () {
+
+    
+
+
     return (
         <div>
         <TitleSearch/>
