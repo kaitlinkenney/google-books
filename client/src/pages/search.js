@@ -42,9 +42,7 @@ function Search() {
       </form>
       <button type="submit" className="btn btn-dark" onClick={handleFormSubmit}>Search </button>
 
-      {!books.items ? ""
-       
-       : (
+      {!books.items ? "" : (
           <div>
             {books.items.map(book => {
               return (

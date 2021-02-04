@@ -1,7 +1,9 @@
 import React from "react";
 import "./results.css";
 
+
 function Results(props) {
+ 
     return (
         <div>
             <div className="card">
@@ -17,10 +19,10 @@ function Results(props) {
                     <div className="row">
                         <p className="pone"><img src={props.image} /></p>
                         <p className="ptwo">{props.description}</p>
-                        <button
-                            className="viewbtn"
-                            href={props.link}
+                        <a href={props.link}>
+                        <button 
                         >View</button>
+                        </a>
                     </div>
                 </div>
             </div>
