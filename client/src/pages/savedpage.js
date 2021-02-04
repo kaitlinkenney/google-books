@@ -50,8 +50,8 @@ function loadBooks() {
                   title={book.title}
                   authors={book.authors}
                   description={book.description}
-                  image={book.thumbnail}
-                  link={book.previewLink}
+                  image={book.image}
+                  link={book.link}
                     />
                     </div>
                   );
