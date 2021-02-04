@@ -10,13 +10,6 @@ function Search() {
 
   // Setting our component's initial state
   const [books, setBooks] = useState([]);
-  // const [formObject, setFormObject] = useState({
-  //   title: "",
-  //   authors: "",
-  //   description: "",
-  //   image: "",
-  //   link: ""
-  // })
   const [bookSearch, setBookSearch] = useState("");
 
   function handleInputChange(event) {
@@ -34,21 +27,6 @@ function Search() {
 
   function save(books) {
 console.log(books)
-  //  const savedBook = {
-  //    title: books.volumeInfo.title,
-  //    authors: books.volumeInfo.authors,
-  //    description: books.volumeInfo.description,
-  //    image: books.volumeInfo.imageLinks.thumbnail,
-  //    link: books.volumeInfo.previewLink
-  //   }
-   //console.log(savedBook)
-// setFormObject({ ...formObject, 
-//   title: books.volumeInfo.title, 
-//   authors: books.volumeInfo.authors, 
-//   description: books.volumeInfo.description,
-//    image: books.volumeInfo.imageLinks.thumbnail, 
-//    link: books.volumeInfo.previewLink
-//    })
      API.saveBook({
       title: books.volumeInfo.title,
       authors: books.volumeInfo.authors,
@@ -60,7 +38,6 @@ console.log(books)
         .catch(err => console.log(err))
     }
 
- 
 
   return (
     <div>
@@ -90,14 +67,12 @@ console.log(books)
                     image={book.volumeInfo.imageLinks.thumbnail}
                     link={book.volumeInfo.previewLink}
                   />
-
                 </div>
               );
             })}
           </div>
         )}
     </div>
-
   )
 }
 export default Search;
