@@ -2,10 +2,16 @@
     margin-left: 160px;
     margin-right: 160px;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .viewbtnsaved {
     margin-left: 800px;
+}
+
+.delbtn {
+    margin-left: 300px;
+  
 }
 
 .pone {

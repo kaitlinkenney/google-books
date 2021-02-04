@@ -9,6 +9,11 @@ function Saved(props) {
                 <div className="row">
                     <h3 className="resulttitle">Title:</h3>
                     <p className="ptitle">{props.title}</p>
+                    <a href={props.link}>
+                        <button 
+                        className="viewbtnsaved"
+                        >View</button>
+                        </a>
                 </div>
                 <div className="row">
                     <h6>Authors:</h6>
@@ -17,11 +22,6 @@ function Saved(props) {
                 <div className="row">
                     <p className="pone"><img src={props.image} /></p>
                     <p className="ptwo">{props.description}</p>     
-                    <a href={props.link}>
-                        <button 
-                        className="viewbtnsaved"
-                        >View</button>
-                        </a>
                 </div>
             </div>
         </div>

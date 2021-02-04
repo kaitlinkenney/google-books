@@ -53,12 +53,9 @@ console.log(books)
               return (
                 <div>
                   <div className="row">
-                    <button
-                      className="savebtn"
-                      value={book}
-                      onClick={() => {save(book)}}
-                    >Save</button>
+                   
                   </div>
+                  <div className="card"> 
                   <Results
                     key={book.id}
                     title={book.volumeInfo.title}
@@ -67,6 +64,18 @@ console.log(books)
                     image={book.volumeInfo.imageLinks.thumbnail}
                     link={book.volumeInfo.previewLink}
                   />
+                   <button
+                      className="savebtn"
+                      value={book}
+                      onClick={() => {save(book)}}
+                    >Save</button>
+                      {/* <a href={book.volumeInfo.previewLink}> */}
+                        <button 
+                        className="viewbtn"
+                        href={book.volumeInfo.previewLink}
+                        >View</button>
+                        {/* </a> */}
+                  </div>
                 </div>
               );
             })}

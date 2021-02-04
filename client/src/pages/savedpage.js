@@ -39,12 +39,12 @@ function loadBooks() {
                 {savedBooks.map(book => {
                   return (
                     <div>
-                    <div className="row">
+                    {/* <div className="row"> */}
                         <button 
                         className="delbtn"
                         onClick={() => {deleteBook(book._id)}}>
                         Delete</button>
-                        </div>
+                        {/* </div> */}
                     <Saved
                   key={book.id}
                   title={book.title}
