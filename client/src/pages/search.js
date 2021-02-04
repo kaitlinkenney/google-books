@@ -31,7 +31,22 @@ function Search() {
       //.then(res => console.log(res.data))
       .catch(err => console.log(err));
   }
- console.log(books)
+
+  function save(books) {
+console.log(books)
+   const savedBook = {title: books.volumeInfo.title, authors: books.volumeInfo.authors, description: books.volumeInfo.description, image: books.volumeInfo.imageLinks.thumbnail, link: books.volumeInfo.previewLink}
+   console.log(savedBook)
+//setFormObject({ ...formObject, title: books.volumeInfo.title, authors: books.authors, description: books.description, image: books.image, link: books.link })
+  // console.log(this)
+   //   API.saveBook({
+    //     title: formObject.title,
+    //     author: formObject.author,
+    //     description: formObject.description
+     
+    //     .then(res => loadBooks())
+    //     .catch(err => console.log(err));
+    // }
+  };
  
 
   return (
@@ -50,7 +65,8 @@ function Search() {
                   <div className="row">
                     <button
                       className="savebtn"
-                      onClick={() => setFormObject({ ...formObject, title: books.title, authors: books.authors, description: books.desscription, image: books.image, link: books.link })}
+                      value={book}
+                      onClick={() => {save(book)}}
                     >Save</button>
                   </div>
                   <Results
@@ -81,15 +97,4 @@ export default Search;
 
 
 
- // function save(event) {
-  //   event.preventDefault();
-  //   if (formObject.title && formObject.author) {
-  //     API.saveBook({
-  //       title: formObject.title,
-  //       author: formObject.author,
-  //       synopsis: formObject.synopsis
-  //     })
-  //       .then(res => loadBooks())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
+ 
