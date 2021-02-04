@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import TitleSearch from "../components/titlesearch";
 import Searchbar from "../components/searchbar";
 import Results from "../components/results";
@@ -10,64 +10,53 @@ function Search() {
 
   // Setting our component's initial state
   const [books, setBooks] = useState([]);
-  // const [formObject, setFormObject] = useState({
-  //   title: "",
-  //   authors: "",
-  //   description: "",
-  //   image: "",
-  //   link: ""
-  // })
+  const [formObject, setFormObject] = useState({
+    title: "",
+    authors: "",
+    description: "",
+    image: "",
+    link: ""
+  })
   const [bookSearch, setBookSearch] = useState("");
 
   function handleInputChange(event) {
-    console.log(event.target)
-    // const { name, value } = event.target;
-    // setFormObject({...formObject, [name]: value})
     const { value } = event.target;
     setBookSearch(value);
   };
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log(event.target)
     API.getResults(bookSearch)
-      // .then(res => setBooks(res.data))
-      .then(res => console.log(res.data))
+      .then(res => setBooks(res.data))
+      //.then(res => console.log(res.data))
       .catch(err => console.log(err));
   }
-
-  // redirect = (url) => {
-  //   const preview = window.location.replace(url);
-  //   return preview;
-  //  }
-
+ console.log(books)
+ 
 
   return (
     <div>
       <TitleSearch />
       <form id="searchBook">
         <input className="form-control form-control-lg" type="text" placeholder="Search for a book!" onChange={handleInputChange} value={bookSearch} />
-        </form>
+      </form>
       <button type="submit" className="btn btn-dark" onClick={handleFormSubmit}>Search </button>
- 
-      {!books.length ? (
-        <h1 className="text-center"></h1>
-      ) : (
+
+      {!books.items ? ""
+       
+       : (
           <div>
-            {books.map(book => {
+            {books.items.map(book => {
               return (
                 <div>
                   <div className="row">
                     <button
-                      className="viewbtn"
-                    >View</button>
-                    <button
                       className="savebtn"
-                    // onClick={saveBook}
+                      onClick={() => setFormObject({ ...formObject, title: books.title, authors: books.authors, description: books.desscription, image: books.image, link: books.link })}
                     >Save</button>
                   </div>
                   <Results
-                    key={book.accessInfo.id}
+                    key={book.id}
                     title={book.volumeInfo.title}
                     authors={book.volumeInfo.authors}
                     description={book.volumeInfo.description}
@@ -85,3 +74,24 @@ function Search() {
   )
 }
 export default Search;
+
+
+
+
+
+
+
+
+
+ // function save(event) {
+  //   event.preventDefault();
+  //   if (formObject.title && formObject.author) {
+  //     API.saveBook({
+  //       title: formObject.title,
+  //       author: formObject.author,
+  //       synopsis: formObject.synopsis
+  //     })
+  //       .then(res => loadBooks())
+  //       .catch(err => console.log(err));
+  //   }
+  // };

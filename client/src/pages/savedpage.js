@@ -26,7 +26,7 @@ function SavedPage () {
                   return (
                     <div>
                     <div className="row">
-                      <button className="viewbtn">View</button>
+                      
                         <button 
                         className="delbtn"
                         onClick={() => deleteBook(book._id)}>
