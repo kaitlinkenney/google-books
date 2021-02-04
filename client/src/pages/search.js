@@ -69,12 +69,11 @@ console.log(books)
                       value={book}
                       onClick={() => {save(book)}}
                     >Save</button>
-                      {/* <a href={book.volumeInfo.previewLink}> */}
+                      <a href={book.volumeInfo.previewLink}>
                         <button 
                         className="viewbtn"
-                        href={book.volumeInfo.previewLink}
                         >View</button>
-                        {/* </a> */}
+                        </a>
                   </div>
                 </div>
               );
@@ -85,13 +84,3 @@ console.log(books)
   )
 }
 export default Search;
-
-
-
-
-
-
-
-
-
- 

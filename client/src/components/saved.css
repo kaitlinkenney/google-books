@@ -6,13 +6,15 @@
 }
 
 .viewbtnsaved {
-    margin-left: 800px;
-}
-
-.delbtn {
-    margin-left: 300px;
-  
-}
+    margin-left: 400px;
+    padding-right: 52px;
+    padding-left: 52px;
+ }
+ 
+ .delbtn {
+     margin-left: 400px;
+     margin-right: 400px;
+ }
 
 .pone {
     margin-top: 5px;
