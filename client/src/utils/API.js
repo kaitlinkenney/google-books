@@ -7,10 +7,6 @@ export default {
        // return axios.get("https://www.googleapis.com/books/v1/volumes?q=", { params: { q: query } });
     },
   
-
-  
-  
-
   // Gets all saved books
   getBooks: function() {
     return axios.get("/api/books");

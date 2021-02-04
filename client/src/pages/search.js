@@ -10,13 +10,13 @@ function Search() {
 
   // Setting our component's initial state
   const [books, setBooks] = useState([]);
-  const [formObject, setFormObject] = useState({
-    title: "",
-    authors: "",
-    description: "",
-    image: "",
-    link: ""
-  })
+  // const [formObject, setFormObject] = useState({
+  //   title: "",
+  //   authors: "",
+  //   description: "",
+  //   image: "",
+  //   link: ""
+  // })
   const [bookSearch, setBookSearch] = useState("");
 
   function handleInputChange(event) {
@@ -34,19 +34,32 @@ function Search() {
 
   function save(books) {
 console.log(books)
-   const savedBook = {title: books.volumeInfo.title, authors: books.volumeInfo.authors, description: books.volumeInfo.description, image: books.volumeInfo.imageLinks.thumbnail, link: books.volumeInfo.previewLink}
-   console.log(savedBook)
-//setFormObject({ ...formObject, title: books.volumeInfo.title, authors: books.authors, description: books.description, image: books.image, link: books.link })
-  // console.log(this)
-   //   API.saveBook({
-    //     title: formObject.title,
-    //     author: formObject.author,
-    //     description: formObject.description
-     
-    //     .then(res => loadBooks())
-    //     .catch(err => console.log(err));
-    // }
-  };
+  //  const savedBook = {
+  //    title: books.volumeInfo.title,
+  //    authors: books.volumeInfo.authors,
+  //    description: books.volumeInfo.description,
+  //    image: books.volumeInfo.imageLinks.thumbnail,
+  //    link: books.volumeInfo.previewLink
+  //   }
+   //console.log(savedBook)
+// setFormObject({ ...formObject, 
+//   title: books.volumeInfo.title, 
+//   authors: books.volumeInfo.authors, 
+//   description: books.volumeInfo.description,
+//    image: books.volumeInfo.imageLinks.thumbnail, 
+//    link: books.volumeInfo.previewLink
+//    })
+     API.saveBook({
+      title: books.volumeInfo.title,
+      authors: books.volumeInfo.authors,
+      description: books.volumeInfo.description,
+      image: books.volumeInfo.imageLinks.thumbnail,
+      link: books.volumeInfo.previewLink
+     })
+        .then(res => console.log("saved"))
+        .catch(err => console.log(err))
+    }
+
  
 
   return (
