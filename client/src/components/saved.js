@@ -4,7 +4,6 @@ import "./saved.css";
 function Saved(props) {
     return (
         <div>
-        {/* <div className="card"> */}
             <div className="card-body">
                 <div className="row">
                     <h3 className="resulttitle">Title:</h3>
@@ -21,7 +20,6 @@ function Saved(props) {
                 </div>
             </div>
         </div>
-    // </div>
     )
 }
 

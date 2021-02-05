@@ -15,9 +15,6 @@ function App() {
             <Search />
           </Route>
           <Route exact path="/saved" component={SavedPage} />
-          {/* <Route exact path="/books/:id">
-            <Detail />
-          </Route> */}
       </div>
     </Router>
   );

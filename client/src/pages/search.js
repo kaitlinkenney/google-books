@@ -12,11 +12,13 @@ function Search() {
   const [books, setBooks] = useState([]);
   const [bookSearch, setBookSearch] = useState("");
 
+//will allow the user to change the input value
   function handleInputChange(event) {
     const { value } = event.target;
     setBookSearch(value);
   };
 
+  //will send the user's submitted input to the api
   function handleFormSubmit(event) {
     event.preventDefault();
     API.getResults(bookSearch)
@@ -25,18 +27,19 @@ function Search() {
       .catch(err => console.log(err));
   }
 
+  //will send the selected book to the api post request
   function save(books) {
-console.log(books)
-     API.saveBook({
+    console.log(books)
+    API.saveBook({
       title: books.volumeInfo.title,
       authors: books.volumeInfo.authors,
       description: books.volumeInfo.description,
       image: books.volumeInfo.imageLinks.thumbnail,
       link: books.volumeInfo.previewLink
-     })
-        .then(res => console.log("saved"))
-        .catch(err => console.log(err))
-    }
+    })
+      .then(res => console.log("saved"))
+      .catch(err => console.log(err))
+  }
 
 
   return (
@@ -48,14 +51,14 @@ console.log(books)
       <button type="submit" className="btn btn-dark" onClick={handleFormSubmit}>Search </button>
 
       {!books.items ? "" : (
-          <div>
-            {books.items.map(book => {
-              return (
-                <div>
-                  <div className="row">
-                   
-                  </div>
-                  <div className="card"> 
+        <div>
+          {books.items.map(book => {
+            return (
+              <div>
+                <div className="row">
+
+                </div>
+                <div className="card">
                   <Results
                     key={book.id}
                     title={book.volumeInfo.title}
@@ -64,22 +67,22 @@ console.log(books)
                     image={book.volumeInfo.imageLinks.thumbnail}
                     link={book.volumeInfo.previewLink}
                   />
-                   <button
-                      className="savebtn"
-                      value={book}
-                      onClick={() => {save(book)}}
-                    >Save</button>
-                      <a href={book.volumeInfo.previewLink}>
-                        <button 
-                        className="viewbtn"
-                        >View</button>
-                        </a>
-                  </div>
+                  <button
+                    className="savebtn"
+                    value={book}
+                    onClick={() => { save(book) }}
+                  >Save</button>
+                  <a href={book.volumeInfo.previewLink}>
+                    <button
+                      className="viewbtn"
+                    >View</button>
+                  </a>
                 </div>
-              );
-            })}
-          </div>
-        )}
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   )
 }

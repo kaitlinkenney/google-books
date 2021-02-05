@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+//creates the schema for how data will enter the database
 const bookSchema = new Schema({
   title: { type: String, required: true },
   authors: {},
