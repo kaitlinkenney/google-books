@@ -22,13 +22,16 @@
     margin-top: 5px;
 }
 
-.viewbtn {
-   margin-left: 400px;
-   padding-right: 52px;
-   padding-left: 52px;
+.rowone {
+    margin-top: 20px;
 }
 
-.savebtn {
-    margin-left: 400px;
-    margin-right: 400px;
-}
+/* .viewbtn {
+    margin-left: 735px;
+    padding-left: 0px;
+ }
+ 
+ .savebtn {
+     margin-left: 800px;
+     margin-top: 20px;
+ } */

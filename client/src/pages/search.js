@@ -67,16 +67,18 @@ function Search() {
                     image={book.volumeInfo.imageLinks.thumbnail}
                     link={book.volumeInfo.previewLink}
                   />
+                  <div className="rowone">
                   <button
-                    className="savebtn"
+                    className="savebtn btn btn-dark ml-1"
                     value={book}
                     onClick={() => { save(book) }}
                   >Save</button>
                   <a href={book.volumeInfo.previewLink}>
                     <button
-                      className="viewbtn"
+                      className="viewbtn btn btn-dark ml-1"
                     >View</button>
                   </a>
+                  </div>
                 </div>
               </div>
             );

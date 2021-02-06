@@ -5,16 +5,16 @@
     margin-bottom: 30px;
 }
 
-.viewbtnsaved {
-    margin-left: 400px;
-    padding-right: 52px;
-    padding-left: 52px;
- }
- 
- .delbtn {
-     margin-left: 400px;
-     margin-right: 400px;
- }
+
+.ptitle {
+    margin-left: 20px;
+    font-size: 23px;
+}
+
+.pauthors {
+    margin-left: 20px;
+    font-size: 16px;
+}
 
 .pone {
     margin-top: 5px;
@@ -25,16 +25,11 @@
     margin-top: 5px;
 }
 
-.ptitle {
-    margin-left: 20px;
-    font-size: 23px;
-}
-.pauthors {
-    margin-left: 20px;
-    font-size: 16px;
-}
-
 .pthree {
     margin-left: 60px;
     margin-top: 5px;
+}
+
+.rowtwo {
+    margin-top: 20px;
 }

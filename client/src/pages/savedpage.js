@@ -48,16 +48,18 @@ function SavedPage() {
                     image={book.image}
                     link={book.link}
                   />
+                  <div className="rowtwo">
                   <button
-                    className="delbtn"
+                    className="delbtn btn btn-dark ml-1"
                     onClick={() => { deleteBook(book._id) }}>
                     Delete</button>
                     <a href={book.link}>
                   <button
-                    className="viewbtnsaved"
+                    className="viewbtnsave btn btn-dark ml-1"
                     href={book.link}
                   >View</button>
                   </a>
+                  </div>
                 </div>
               </div>
             );
