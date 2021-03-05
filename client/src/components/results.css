@@ -1,10 +1,12 @@
 .ptitle {
     margin-left: 20px;
+    margin-top: 2px;
     font-size: 23px;
 }
 
 .pauthors {
     margin-left: 20px;
+    margin-top: -3px;
     font-size: 16px;
 }
 

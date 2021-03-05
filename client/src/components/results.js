@@ -9,12 +9,16 @@ function Results(props) {
             {/* <div className="card"> */}
                 <div className="card-body">
                     <div className="row">
+                        <div className="col-sm">
                         <h3 className="resulttitle">Title:</h3>
                         <p className="ptitle">{props.title}</p>
+                        </div>
                     </div>
                     <div className="row">
-                        <h6>Authors:</h6>
+                        <div className="col-sm">
+                        <h5>Authors:</h5>
                         <p className="pauthors">{props.authors}</p>
+                        </div>
                     </div>
                     <div className="row">
                         <p className="pone"><img src={props.image} /></p>
