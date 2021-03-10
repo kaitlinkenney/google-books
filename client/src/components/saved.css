@@ -5,28 +5,42 @@
     margin-bottom: 30px;
 }
 
+h6 {
+    margin-left: 45px;
+}
+
+.resulttitle {
+    margin-left: 45px;
+}
+
 
 .ptitle {
-    margin-left: 20px;
-    font-size: 23px;
+    margin-left: 10px;
+    /* margin-left: 500px; */
+    /* margin-right: 400px; */
+    font-size: 25px;
 }
 
 .pauthors {
-    margin-left: 20px;
-    font-size: 16px;
+    margin-left: 10px;
+    margin-top: -3px;
+    font-size: 16.5px;
 }
 
 .pone {
     margin-top: 5px;
+    margin-left: 45px;
 }
 
 .ptwo {
-    margin-left: 60px;
+    padding-left: 45px;
     margin-top: 5px;
+    margin-bottom: 5px;
+    /* margin-right: 40px; */
 }
 
 .pthree {
-    margin-left: 60px;
+    /* margin-left: 45px; */
     margin-top: 5px;
 }
 

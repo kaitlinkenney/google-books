@@ -1,4 +1,4 @@
-.ptitle {
+/* .ptitle {
     margin-left: 20px;
     margin-top: 2px;
     font-size: 23px;
@@ -9,6 +9,7 @@
     margin-top: -3px;
     font-size: 16px;
 }
+
 
 .pone {
     margin-top: 5px;
@@ -25,15 +26,56 @@
 }
 
 .rowone {
+    margin-top: 500px;
+} */
+
+.card {
+    margin-left: 160px;
+    margin-right: 160px;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-/* .viewbtn {
-    margin-left: 735px;
-    padding-left: 0px;
- }
- 
- .savebtn {
-     margin-left: 800px;
-     margin-top: 20px;
- } */
+h6 {
+    margin-left: 45px;
+}
+
+.resulttitle {
+    margin-left: 45px;
+}
+
+
+.ptitle {
+  
+    margin-left: 10px; 
+   
+    font-size: 25px;
+}
+
+.pauthors {
+    margin-left: 10px;
+    margin-top: -3px;
+    font-size: 16.5px;
+}
+
+.pone {
+    margin-top: 5px;
+    margin-left: 45px;
+}
+
+.pdescr {
+    padding-left: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 22px;
+    /* margin-right: 40px; */
+}
+
+.pthree {
+    /* margin-left: 45px; */
+    margin-top: 5px;
+}
+
+.rowtwo {
+    margin-top: 20px;
+}

@@ -3,6 +3,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import Saved from "../components/saved";
 import TitleSaved from "../components/titlesaved";
+import "./savedpage.css";
 
 
 function SavedPage() {
@@ -42,18 +43,20 @@ function SavedPage() {
                 <div className="card">
                   <Saved
                     key={book.id}
+                    mongoId={book._id}
                     title={book.title}
                     authors={book.authors}
                     description={book.description}
                     image={book.image}
                     link={book.link}
+                    deleteBook={deleteBook}
                   />
                   <div className="rowtwo">
                   <button
-                    className="delbtn btn btn-dark ml-1"
+                    className="delbtn btn btn-dark ml-5"
                     onClick={() => { deleteBook(book._id) }}>
-                    Delete</button>
-                    <a href={book.link}>
+                    Delete</button> 
+                   <a href={book.link}>
                   <button
                     className="viewbtnsave btn btn-dark ml-1"
                     href={book.link}

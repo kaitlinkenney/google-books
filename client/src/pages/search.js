@@ -55,9 +55,7 @@ function Search() {
           {books.items.map(book => {
             return (
               <div>
-                <div className="row">
-
-                </div>
+             
                 <div className="card">
                   <Results
                     key={book.id}
@@ -69,13 +67,13 @@ function Search() {
                   />
                   <div className="rowone">
                   <button
-                    className="savebtn btn btn-dark ml-1"
+                    className="savebtn srchbtns btn btn-dark ml-5"
                     value={book}
                     onClick={() => { save(book) }}
                   >Save</button>
                   <a href={book.volumeInfo.previewLink}>
                     <button
-                      className="viewbtn btn btn-dark ml-1"
+                      className="viewbtn srchbtns btn btn-dark ml-1"
                     >View</button>
                   </a>
                   </div>
