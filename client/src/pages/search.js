@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
+import {Modal, Button} from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import TitleSearch from "../components/titlesearch";
 import Searchbar from "../components/searchbar";
@@ -12,7 +13,12 @@ function Search() {
   const [books, setBooks] = useState([]);
   const [bookSearch, setBookSearch] = useState("");
 
-//will allow the user to change the input value
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  //will allow the user to change the input value
   function handleInputChange(event) {
     const { value } = event.target;
     setBookSearch(value);
@@ -42,6 +48,8 @@ function Search() {
   }
 
 
+
+
   return (
     <div>
       <TitleSearch />
@@ -55,7 +63,7 @@ function Search() {
           {books.items.map(book => {
             return (
               <div>
-             
+
                 <div className="card">
                   <Results
                     key={book.id}
@@ -66,18 +74,33 @@ function Search() {
                     link={book.volumeInfo.previewLink}
                   />
                   <div className="rowone">
-                  <button
-                    className="savebtn srchbtns btn btn-dark ml-5"
-                    value={book}
-                    onClick={() => { save(book) }}
-                  >Save</button>
-                  <a href={book.volumeInfo.previewLink}>
                     <button
-                      className="viewbtn srchbtns btn btn-dark ml-1"
-                    >View</button>
-                  </a>
+                      className="savebtn srchbtns btn btn-dark ml-5"
+                      value={book}
+                      onClick={() => {
+                        save(book)
+                        handleShow();
+                      }
+                      }
+                    >Save</button>
+                    <a href={book.volumeInfo.previewLink}>
+                      <button
+                        className="viewbtn srchbtns btn btn-dark ml-1"
+                      >View</button>
+                    </a>
                   </div>
                 </div>
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Congratulations!</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>This book has been saved.</Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+          </Button>
+                  </Modal.Footer>
+                </Modal>
               </div>
             );
           })}
